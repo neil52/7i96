@@ -869,13 +869,13 @@ def buildio(parent):
 		if outputText == 'Coolant Mist':
 			ioContents.append('net mist-output iocontrol.0.coolant-mist => hm2_7i96.0.ssr.00.out-0{}\n'.format(index))
 		if outputText == 'Spindle On':
-			ioContents.append('net spindle-on motion.spindle-on => hm2_7i96.0.ssr.00.out-0{}\n'.format(index))
+			ioContents.append('net spindle-on spindle.0.on => hm2_7i96.0.ssr.00.out-0{}\n'.format(index))
 		if outputText == 'Spindle CW':
-			ioContents.append('net spindle-cw motion.spindle-forward => hm2_7i96.0.ssr.00.out-0{}\n'.format(index))
+			ioContents.append('net spindle-cw spindle.0.forward => hm2_7i96.0.ssr.00.out-0{}\n'.format(index))
 		if outputText == 'Spindle CCW':
-			ioContents.append('net spindle-ccw motion.spindle-reverse => hm2_7i96.0.ssr.00.out-0{}\n'.format(index))
+			ioContents.append('net spindle-ccw spindle.0.reverse => hm2_7i96.0.ssr.00.out-0{}\n'.format(index))
 		if outputText == 'Spindle Brake':
-			ioContents.append('net spindle-brake motion.spindle-brake => hm2_7i96.0.ssr.00.out-0{}\n'.format(index))
+			ioContents.append('net spindle-brake spindle.0.brake => hm2_7i96.0.ssr.00.out-0{}\n'.format(index))
 		if outputText == 'E-Stop Out':
 			ioContents.append('net estop-loop hm2_7i96.0.ssr.00.out-0{}\n'.format(index))
 		if outputText == 'Digital Out 0':
